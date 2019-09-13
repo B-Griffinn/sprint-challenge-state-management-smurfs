@@ -32,17 +32,9 @@ const SmurfForm = props => {
           .then(res => console.log("POST res ", res))
           .catch(err => console.log("POST Err", err.response));
 
-//  const  addSmurfCard = e => {
-//           e.preventDefault();
-//           {myPost(smurf => {
-//         <SmurfCard 
-//         smurf={smurf}
-//         />
-//         })}
-//     }
           setState({
           name: "",
-          age: 0,
+          age: "",
           height: ""
         });
       };
@@ -51,22 +43,35 @@ const SmurfForm = props => {
         
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input 
-                type="text"
-                value={state.name}
-                name="name"
-                placeholder="Smerf Name"
-                onChange={handleNameChange}
+        <div className="row">
+    <div className="row">
+      <form className="col s12"
+      onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="input-field col s6">
+            <input id="input_text" data-length="10"
+               type="text"
+                    value={state.name}
+                    name="name"
+                    placeholder="Smerf Name"
+                    onChange={handleNameChange} 
             />
-            <input 
-                type="number"
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-field col s12">
+          <input id="input_text" data-length="10"
+              type="number"
                 value={state.age}
                 name="age"
                 placeholder="Enter Smerf Age"
                 onChange={handleAgeChange}
             />
-            <input 
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-field col s12">
+          <input id="input_text" data-length="10"
                 type="text"
                 value={state.height}
                 name="height"
@@ -74,7 +79,39 @@ const SmurfForm = props => {
                 onChange={handleHeightChange}
             />
             <button>Add Smerf</button>
-        </form>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+        // {/* <form 
+        //     onSubmit={handleSubmit}
+        //     classNameName="form-wrapper col s12"
+        // >
+        //     <input 
+        //         type="text"
+        //         value={state.name}
+        //         name="name"
+        //         placeholder="Smerf Name"
+        //         onChange={handleNameChange}
+        //     />
+        //     <input 
+        //         type="number"
+        //         value={state.age}
+        //         name="age"
+        //         placeholder="Enter Smerf Age"
+        //         onChange={handleAgeChange}
+        //     />
+        //     <input 
+        //         type="text"
+        //         value={state.height}
+        //         name="height"
+        //         placeholder="Enter Smerfs Height"
+        //         onChange={handleHeightChange}
+        //     /> */}
+        //     {/* <button>Add Smerf</button>
+        // </form>
+        // </div> */}
     )
 }
 
