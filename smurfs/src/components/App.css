@@ -7,7 +7,7 @@
   height: 80px;
 }
 
-.App-header {
+.app-wrapper {
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -18,11 +18,25 @@
   font-size: 1.5em;
 }
 
-.App-intro {
+.app-wrapper {
   font-size: large;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+.form-wrapper{
+  /* border: 1px solid red;  */
+
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+input {
+  margin: 10px 10px 10px 10px;
 }
